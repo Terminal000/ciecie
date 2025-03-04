@@ -1,3 +1,4 @@
+document.title ="Cięcie"
 let pIleWozkow = document.querySelector(".ileWozkow");
 let pIleJeszczeSztukLopatek = document.querySelector(".ileJeszczeSztukLopatek");
 let pIlePatel= document.querySelector(".ilePatel");
