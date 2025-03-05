@@ -3,6 +3,7 @@ let pIleWozkow = document.querySelector(".ileWozkow");
 let pIleJeszczeSztukLopatek = document.querySelector(".ileJeszczeSztukLopatek");
 let pIlePatel= document.querySelector(".ilePatel");
 let pIleTrzebaProfili = document.querySelector(".ileTrzebaProfili");
+let pWymiary = document.querySelector(".wymiary");
 function przelicz() {
   
 
@@ -13,11 +14,13 @@ function przelicz() {
   const ilenapal = parseFloat(document.getElementById("ilenapal").value);
   const ilenawozku = parseFloat(document.getElementById("ilenawozku").value);
   const ildoc = parseFloat(document.getElementById("ildoc").value);
-  const ilakt = parseFloat(document.getElementById("ilakt").value);
+  const ilakt = parseFloat(document.getElementById("ilakt").value) || 0;
 
   const ilWozkow = Math.floor(ildoc/ilenawozku);
   const ilPalcal= Math.floor(ildoc/ilenapal);
   const ilWozkowReszta = ildoc -(ilWozkow*ilenawozku)
+
+  const podstawaGorna = (dlugosc - (2*wysokosc*(1/(Math.tan(kat*Math.PI/180))))).toFixed(1)
 
   const IlePaletreszta = ildoc-(ilPalcal*ilenapal);
 
@@ -29,7 +32,8 @@ function przelicz() {
  // console.log(IleWozobli)
   pIleWozkow.textContent = IleWozobli
   pIlePatel.textContent = IlePaletobli
-  pIleJeszczeSztukLopatek.textContent =`Pozostało do wycięcia:${ileJeszcze} łopatki` 
+  pIleJeszczeSztukLopatek.textContent =`Pozostało do wycięcia:${ileJeszcze} łopatki`
+  pWymiary .textContent = `Krótsza podstawa trapezu przekroju podłużnego profilu wynosi: ${podstawaGorna}`
 // console.log(pIleWozkow)
 }
 
