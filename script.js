@@ -4,6 +4,9 @@ let pIleJeszczeSztukLopatek = document.querySelector(".ileJeszczeSztukLopatek");
 let pIlePatel= document.querySelector(".ilePatel");
 let pIleTrzebaProfili = document.querySelector(".ileTrzebaProfili");
 let pWymiary = document.querySelector(".wymiary");
+
+let pDeska= document.querySelector(".pdeska");
+let pWysDeska= document.querySelector(".wysdeska");
 function przelicz() {
   
 
@@ -39,4 +42,30 @@ function przelicz() {
 
 document.querySelectorAll("input").forEach(input => {
   input.addEventListener("input", przelicz);
+})
+
+
+
+////////////////////////////////////////////////////////
+
+function przelicz2() {
+
+  const ildoc = parseFloat(document.getElementById("ildoc").value);
+  const rzedy = parseFloat(document.getElementById("rzedy").value);
+  const wys10 = parseFloat(document.getElementById("wys2").value);
+
+  const pCol = Math.floor(ildoc/rzedy);
+
+  const pRzedyReszta = ildoc -(rzedy * pCol);
+
+  pDeska.textContent = `${pCol} w kolumnie i ${pRzedyReszta} profili reszty`;
+  pWysDeska.textContent = `Tu będzie wysokość deski`;
+
+  console.log(`${pCol} , ${pRzedyReszta} profili reszty`)
+
+}
+
+
+document.querySelectorAll(".deska").forEach(input => {
+  input.addEventListener("input", przelicz2);
 })

@@ -10,7 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 98vh;
+  min-width: 98vh;
 }
 .wrap .con1 {
   display: flex;
@@ -30,21 +30,15 @@ body {
   border-radius: 1vh;
   box-shadow: 2px 2px 5px 2px black;
 }
+.wrap .con1 label img {
+  height: 3vh;
+}
 .wrap .con1 label[for=dlugosc] img {
   height: 3vh;
   rotate: 90deg;
 }
-.wrap .con1 label[for=wysokosc] img {
-  height: 3vh;
-}
-.wrap .con1 label[for=kat] img {
-  height: 3vh;
-}
-.wrap .con1 label[for=ilenapal] img {
-  height: 3vh;
-}
-.wrap .con1 label[for=ilenawozku] img {
-  height: 3vh;
+.wrap .con1 .tyt2 {
+  margin-top: 10vh;
 }
 .wrap .con2 {
   margin-top: 2vh;
