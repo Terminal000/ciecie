@@ -10,7 +10,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-width: 98vh;
+  min-height: 100vh;
 }
 .wrap .con1 {
   display: flex;
@@ -39,6 +39,7 @@ body {
 }
 .wrap .con1 .tyt2 {
   margin-top: 10vh;
+  text-align: center;
 }
 .wrap .con2 {
   margin-top: 2vh;
