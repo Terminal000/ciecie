@@ -13,11 +13,13 @@ body {
   min-height: 100vh;
 }
 .wrap .con1 {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin-top: 2vh;
+  transition: 0.3s;
 }
 .wrap .con1 .inp {
   margin-block: 1vh;
@@ -40,6 +42,20 @@ body {
 .wrap .con1 .tyt2 {
   margin-top: 10vh;
   text-align: center;
+}
+.wrap .con1 .dymek {
+  position: absolute;
+  border: 1px solid black;
+  padding: 1vh;
+  border-radius: 1vh;
+  background-color: rgb(185, 255, 164);
+  width: 20vh;
+  text-align: center;
+  display: none;
+}
+.wrap .con1:hover .dymek {
+  display: block;
+  transition: 0.5s;
 }
 .wrap .con2 {
   margin-top: 2vh;
