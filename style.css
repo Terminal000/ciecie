@@ -75,12 +75,14 @@ body {
 }
 .wrap .col1 .info .dymek {
   position: absolute;
+  overflow-y: scroll;
   border: 1px solid black;
   font-size: 2vh;
   padding: 1vh;
   border-radius: 1vh;
   background-color: rgb(185, 255, 164);
   width: 25vh;
+  max-height: 17vh;
   text-align: center;
   opacity: 0;
   visibility: hidden;

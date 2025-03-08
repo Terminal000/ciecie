@@ -4,6 +4,7 @@ let pIleJeszczeSztukLopatek = document.querySelector(".ileJeszczeSztukLopatek");
 let pIlePatel= document.querySelector(".ilePatel");
 let pIleTrzebaProfili = document.querySelector(".ileTrzebaProfili");
 let pWymiary = document.querySelector(".wymiary");
+let pIleJeszczeProfili = document.querySelector(".ileJeszczeProfili")
 
 let pDeska= document.querySelector(".pdeska");
 let pWysDeska= document.querySelector(".wysdeska");
@@ -28,11 +29,14 @@ function przelicz() {
   const IlePaletreszta = ildoc-(ilPalcal*ilenapal);
 
   const ileJeszcze = ildoc- ilakt;
+  const ileJeszczeProfili = Math.floor((ildoc-ilakt)/ilciec)
+  const ileJeszczeProfiliReszta = -(ilciec*ileJeszczeProfili)+(ildoc-ilakt)
 
 
   const IleWozobli = `${ilWozkow} wózki i ${ilWozkowReszta} łopatek reszty`
   const IlePaletobli = `${ilPalcal} palet i ${IlePaletreszta} łopatek reszty`
- // console.log(IleWozobli)
+ // console.log(IleWozobli)'
+ pIleJeszczeProfili.textContent = `Potrzeba jeszcze ${ileJeszczeProfili} całych profili i ${ileJeszczeProfiliReszta}`
   pIleWozkow.textContent = IleWozobli
   pIlePatel.textContent = IlePaletobli
   pIleJeszczeSztukLopatek.textContent =`Pozostało do wycięcia:${ileJeszcze} łopatki`
@@ -52,14 +56,14 @@ function przelicz2() {
 
   const ildoc = parseFloat(document.getElementById("ildoc").value);
   const rzedy = parseFloat(document.getElementById("rzedy").value);
-  const wys10 = parseFloat(document.getElementById("wys2").value);
+  const wys1 = parseFloat(document.getElementById("wys2").value);
 
   const pCol = Math.floor(ildoc/rzedy);
 
   const pRzedyReszta = ildoc -(rzedy * pCol);
 
   pDeska.textContent = `${pCol} w kolumnie i ${pRzedyReszta} profili reszty`;
-  pWysDeska.textContent = `Tu będzie wysokość deski`;
+  pWysDeska.textContent = `Długość deski to ${15+(wys1 * pCol)} cm`;
 
   console.log(`${pCol} , ${pRzedyReszta} profili reszty`)
 
