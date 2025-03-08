@@ -59,35 +59,35 @@ body {
   margin-top: 5vh;
 }
 .wrap .col1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.wrap .col1 .info {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.wrap .col1 .info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
   height: -moz-max-content;
   height: max-content;
-  left: 110%;
-  top: 45%;
+  margin-top: 2vh;
 }
 .wrap .col1 .info .dymek {
   position: absolute;
   border: 1px solid black;
+  font-size: 2vh;
   padding: 1vh;
   border-radius: 1vh;
   background-color: rgb(185, 255, 164);
-  width: 30vh;
+  width: 25vh;
   text-align: center;
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
   transition: 0.3s ease-in-out;
-  bottom: 100%;
-  left: 0;
+  top: 100%;
+  z-index: 100;
 }
 .wrap .col1 .info .dymek p {
   font-weight: 600;
