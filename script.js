@@ -43,7 +43,7 @@ function odmiana(liczba, forma1, forma234, formaReszta){
 
 let wozki = odmiana(ilWozkow, "wozek", "wózki", "wózków")
 let lopatki = odmiana(ilWozkowReszta, "łopatka", "łopatki", "łopatek")
-let palety = odmiana(IlePaletreszta, "paleta", "palety", "palet")
+let palety = odmiana(ilPalcal, "paleta", "palety", "palet")
 let lopatkireszta = odmiana(IlePaletreszta, "łopatka", "łopatki", "łopatek")
 let lopatkipoz = odmiana(ileJeszcze, "łopatka", "łopatki", "łopatek")
 
