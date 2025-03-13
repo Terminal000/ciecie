@@ -32,16 +32,31 @@ function przelicz() {
   const ileJeszczeProfili = Math.floor((ildoc-ilakt)/ilciec)
   const ileJeszczeProfiliReszta = -(ilciec*ileJeszczeProfili)+(ildoc-ilakt)
 
+////funkcja końcówek
 
-  const IleWozobli = `${ilWozkow} wózki i ${ilWozkowReszta} łopatek reszty`
-  const IlePaletobli = `${ilPalcal} palet i ${IlePaletreszta} łopatek reszty`
+function odmiana(liczba, forma1, forma234, formaReszta){
+  if(liczba==1) return forma1;
+  if([2,3,4].includes(liczba % 10)) return forma234;
+  if (liczba % 100 >=11 & liczba % 100 <=14) return formaReszta
+  return formaReszta
+}
+
+let wozki = odmiana(ilWozkow, "wozek", "wózki", "wózków")
+let lopatki = odmiana(ilWozkowReszta, "łopatka", "łopatki", "łopatek")
+let palety = odmiana(IlePaletreszta, "paleta", "palety", "palet")
+let lopatkireszta = odmiana(IlePaletreszta, "łopatka", "łopatki", "łopatek")
+let lopatkipoz = odmiana(ileJeszcze, "łopatka", "łopatki", "łopatek")
+
+
+  const IleWozobli = `${ilWozkow} ${wozki} i ${ilWozkowReszta} ${lopatki} reszty`
+  const IlePaletobli = `${ilPalcal} ${palety} i ${IlePaletreszta} ${lopatkireszta} reszty`
  // console.log(IleWozobli)'
- pIleJeszczeProfili.textContent = `Potrzeba jeszcze ${ileJeszczeProfili} całych profili i ${ileJeszczeProfiliReszta}`
+  pIleJeszczeProfili.textContent = `Potrzeba jeszcze ${ileJeszczeProfili} całych profili i ${ileJeszczeProfiliReszta}`
   pIleWozkow.textContent = IleWozobli
   pIlePatel.textContent = IlePaletobli
-  pIleJeszczeSztukLopatek.textContent =`Pozostało do wycięcia:${ileJeszcze} łopatki`
+  pIleJeszczeSztukLopatek.textContent =`Pozostało do wycięcia: ${ileJeszcze} ${lopatkipoz}`
   pWymiary .textContent = `Krótsza podstawa trapezu przekroju podłużnego profilu wynosi: ${podstawaGorna}`
-// console.log(pIleWozkow)
+  console.log(ost)
 }
 
 document.querySelectorAll("input").forEach(input => {
