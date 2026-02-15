@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cięcie</title>
+    <title>Cięcie ENSEPATEC</title>
     <link rel="stylesheet" href="style.css">
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.11.1/math.min.js"></script>
@@ -12,10 +12,20 @@
 <body>
 
     <div class="wrap">
-        <h1 class="tyt">Cięcie "ESEPATEC"</h1>
+        <h1 class="tyt">Cięcie "ENSEPATEC"</h1>
         <div class="con1">
             <label for="dlugosc">Długość profilu
-                <img src="wys.png" alt="długość profilu"> :</label>
+                <img src="wys.png" alt="długość profilu"> :
+
+            <div class="info">
+                <ion-icon class="infoion" name="information-circle-outline"></ion-icon>
+                <span class="dymek">
+Podaj wymiar na jaki należy ciąć profil.
+                </span>
+                
+            </div> 
+            
+            </label>
             <input type="number" class="inp" id="dlugosc" name="dlugosc">
 
             <label for="wysokosc">Wysokość profilu
@@ -42,7 +52,7 @@
             <input type="number" class="inp deska" id="ildoc" name="ildoc">
 
             <label for="ilakt">Ilość aktualna:</label>
-            <input type="text" class="inp" id="ilakt" name="ilakt">
+            <input type="number" class="inp" id="ilakt" name="ilakt">
         </div>
         <div class="col1">
               <div class="con2">
@@ -71,7 +81,7 @@
             <label for="rzedy">Ilość rzędów na palecie</label>
             <input type="number" name="rzedy" id="rzedy" class="inp deska">
 
-            <label for="wys2">Wysokość profila </label>
+            <label for="wys2">Wysokość profila [cm] </label>
             <input type="number" name="wys2" id="wys2" class="inp deska">
 
         </div>
